@@ -1,0 +1,42 @@
+# C-a :source .screenrc
+termcapinfo xterm* ti@:te@
+startup_message off
+vbell off
+term "screen-256color"
+autodetach on
+altscreen on
+shelltitle '$ |bash'
+defscrollback 10000
+defutf8 on
+nonblock on
+
+#escape ``
+##escape `e
+#
+## BIND ESCAPE TO F11!
+## bindkey -k F1 command
+
+termcapinfo xterm*|Eterm|mlterm|rxvt* "hs:ts=\E]0;:fs=\007:ds=\E]0;screen\007"
+termcapinfo rxvt 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+#hardstatus off
+#caption always '%?%F%{= bk}%:%{= kb}%?[%{G}%H%?%F%{k}%:%{b}%?][%=%?%F%{w}%:%{w}%?%?%-Lw%?%{G}(%{W}%n*%f%t%?(%u)%?%{G})%{w}%?%+Lw%?%=%?%F%{k}%:%{b}%?][%{G}%D %m/%d %{W}%c%?%F%{k}%:%{b}%?]'
+#hardstatus string "%n:%t%? - [%h]%? - screen"
+
+
+#caption always "%{=u .G} %-w%<%{=ub .W}%n %t %{=u .G}%+w "
+#hardstatus alwaysignore
+#hardstatus alwayslastline "%{= .y} [Load %l]%<%=%{= .W} %{B}%H %=%{=b .y} [%Y-%m-%d %c:%s]" 
+
+hardstatus alwayslastline
+hardstatus string "%{= .g}[load %l]%{= kw}[%=%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%? %=]%{B}[%H]%{=b .y}[%Y-%m-%d %c:%s]" 
+#hardstatus string "%{= .g}[load %l]%{= kw}[%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}]%{B}[%H]%{=b .y}[%Y-%m-%d %c:%s]" 
+
+
+
+#hardstatus alwayslastline
+#hardstatus string '%{= kw}[ %{= kb}%H%{= kw} ][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ][ %{r}%l%{w} ]%{w}[%{r} %d/%m/%y %C %A %{w}]%{w}'
+
+screen -t BASH	0
+screen -t SSH	1  ssh -p 38022 flter@sslab10.cs.nctu.edu.tw
+screen -t IRC	2
+select 0
