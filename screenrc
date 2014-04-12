@@ -37,6 +37,6 @@ hardstatus string "%{= .g}[load %l]%{= kw}[%=%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%
 #hardstatus string '%{= kw}[ %{= kb}%H%{= kw} ][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ][ %{r}%l%{w} ]%{w}[%{r} %d/%m/%y %C %A %{w}]%{w}'
 
 screen -t BASH	0
-screen -t SSH	1  ssh -p 38022 flter@sslab10.cs.nctu.edu.tw
+screen -t SSH	1
 screen -t IRC	2
 select 0
