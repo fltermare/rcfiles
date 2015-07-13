@@ -2,7 +2,7 @@
 termcapinfo xterm* ti@:te@
 startup_message off
 vbell off
-term "screen-256color"
+#term "screen-256color"
 autodetach on
 altscreen on
 shelltitle '$ |bash'
