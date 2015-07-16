@@ -8,6 +8,7 @@
   set tabstop=4
   set nocompatible
   set shiftwidth=4
+  set expandtab
   set cursorcolumn
   set smartindent
   set cursorline
