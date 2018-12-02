@@ -5,10 +5,10 @@
   set enc=utf-8
   set fenc=utf-8
   set termencoding=utf-8
-  set tabstop=4
-  set nocompatible
-  set shiftwidth=4
   set expandtab
+  set tabstop=4
+  set shiftwidth=4
+  set nocompatible
   set cursorcolumn
   set smartindent
   set cursorline
@@ -24,7 +24,24 @@
   set foldmethod=indent
   syntax on
   set makeprg=g++\ -Wall\ -o\ %:r\ % 
-   
-   "hi CursorLine term=none cterm=none ctermbg=none ctermbg=none                    
-   "au InsertEnter * hi CursorLine term=none cterm=underline                        
-   "au InsertLeave * hi CursorLine term=none cterm=none ctermbg=none 
+  
+    if has("cscope")
+    set csprg=/usr/bin/cscope
+    set csto=0
+    set cst
+    set nocsverb
+    "add any database in current directory
+    if filereadable("cscope.out")
+    cs add cscope.out
+    " else add database pointed to by environment
+    elseif $CSCOPE_DB != ""
+    cs add $CSCOPE_DB
+    endif
+    set csverb
+    set cscopetag
+    set cscopequickfix=s-,g-,c-,d-,t-,e-,f-,i-
+    endif
+
+
+set laststatus=2
+set t_Co=256
