@@ -15,3 +15,12 @@ Add plugins to `.zshrc`
 ```
 plugins=(git zsh-completions zsh-autosuggestions)
 ```
+
+## tmux
+* Install tpm
+  * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+* Install tpm plugin
+  * prefix + Crtl-I
+* Save/Restore session
+  * prefix + Crtl-s
+  * prefix + Crtl-r
